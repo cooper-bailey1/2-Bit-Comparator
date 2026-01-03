@@ -42,6 +42,9 @@ The project emphasizes:
   - Inverters
 - **Total transistor count:** 56
 
+The schematic is shown below: 
+![Old Comparator Schematic](images/oldSchematic.png)
+
 This version was fully functional but not area- or speed-optimal.
 
 ---
@@ -63,6 +66,9 @@ To reduce transistor count and delay:
 
 This reduced area and simplified the critical path.
 
+The schematic is shown below: 
+![Optimized Comparator Schematic](images/finalSchematic.png)
+
 ---
 
 ## ⏱️ Timing & Critical Path Analysis
@@ -70,6 +76,8 @@ This reduced area and simplified the critical path.
 ### Critical Path
 The longest delay occurs when the **MSBs (A1 or B1)** toggle:
 A1/B1 -> XNOR -> Custom G/L Gate -> NOR -> E -> Output
+
+![Critical Path](images/critPathSchematic.png)
 
 - Verified using worst-case single-bit input transitions
 - The **E output** dominates overall timing
@@ -117,7 +125,11 @@ After transistor resizing and re-simulation:
 
 ### Maximum Operating Frequency
 - **Worst-case:** ~447 MHz  
-- **Average-case:** ~519 MHz  
+- **Average-case:** ~519 MHz
+
+
+The waveform output showing correct functionality is below: 
+![HSPICE Waveform Output](images/waveForm_output.png)
 
 ---
 
