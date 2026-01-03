@@ -162,6 +162,6 @@ This project reflects real-world custom digital IC design techniques used in hig
 - .sp files used in the simulation are HSpice Files and not SourcePawn
 
 
-## 👤 Author
+## Author
 **Cooper Bailey**  
 Computer Engineering — Tufts University
