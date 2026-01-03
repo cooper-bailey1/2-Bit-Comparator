@@ -6,7 +6,7 @@ This project was completed as a final project for **EE103 (Intro to VLSI Design)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This repository contains the design, optimization, and verification of a **2-bit magnitude comparator** implemented entirely in **static CMOS logic**.  
 The comparator evaluates two 2-bit inputs (`A1 A0` and `B1 B0`) and produces three outputs:
@@ -24,7 +24,7 @@ The project emphasizes:
 
 ---
 
-## 🧠 Design Methodology
+## Design Methodology
 
 ### 1. Logic Derivation
 - Constructed the full truth table for all 16 input combinations
@@ -49,7 +49,7 @@ This version was fully functional but not area- or speed-optimal.
 
 ---
 
-## 🔧 Custom Gate Optimization
+## Custom Gate Optimization
 
 To reduce transistor count and delay:
 
@@ -71,7 +71,7 @@ The schematic is shown below:
 
 ---
 
-## ⏱️ Timing & Critical Path Analysis
+## Timing & Critical Path Analysis
 
 ### Critical Path
 The longest delay occurs when the **MSBs (A1 or B1)** toggle:
@@ -87,7 +87,7 @@ A1/B1 -> XNOR -> Custom G/L Gate -> NOR -> E -> Output
 
 ---
 
-## 🚀 Logical Effort Optimization
+## Logical Effort Optimization
 
 Applied **logical effort theory** to minimize delay:
 
@@ -106,7 +106,7 @@ All sizing respected:
 
 ---
 
-## 📈 Final Performance Results
+## Final Performance Results
 
 After transistor resizing and re-simulation:
 
@@ -133,7 +133,7 @@ The waveform output showing correct functionality is below:
 
 ---
 
-## 🛠️ Tools & Technology
+## Tools & Technology
 
 - **Synopsys Custom Compiler** — schematic design
 - **HSPICE** — transient & timing simulation
@@ -142,12 +142,12 @@ The waveform output showing correct functionality is below:
 
 ---
 
-📄 **Full technical report:**  
+**Full technical report:**  
 See [`EE103_Final_Project.pdf`](https://drive.google.com/file/d/1LzzOUctUPfZyJDBPMk8dwX1nV7vOS_ef/view?usp=sharing) for complete derivations, schematics, and simulation results.
 
 ---
 
-## 🎯 Key Takeaways
+## Key Takeaways
 
 - Demonstrates an end-to-end custom CMOS design flow
 - Shows practical application of logical effort
@@ -157,6 +157,10 @@ See [`EE103_Final_Project.pdf`](https://drive.google.com/file/d/1LzzOUctUPfZyJDB
 This project reflects real-world custom digital IC design techniques used in high-performance datapaths and control logic.
 
 ---
+
+## Note 
+- .sp files used in the simulation are HSpice Files and not SourcePawn
+
 
 ## 👤 Author
 **Cooper Bailey**  
