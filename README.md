@@ -143,7 +143,7 @@ The waveform output showing correct functionality is below:
 ---
 
 📄 **Full technical report:**  
-See `EE103_Final_Project.pdf` for complete derivations, schematics, and simulation results.
+See [`EE103_Final_Project.pdf`](https://drive.google.com/file/d/1LzzOUctUPfZyJDBPMk8dwX1nV7vOS_ef/view?usp=sharing) for complete derivations, schematics, and simulation results.
 
 ---
 
