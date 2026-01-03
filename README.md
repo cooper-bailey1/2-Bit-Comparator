@@ -69,4 +69,83 @@ This reduced area and simplified the critical path.
 
 ### Critical Path
 The longest delay occurs when the **MSBs (A1 or B1)** toggle:
+A1/B1 -> XNOR -> Custom G/L Gate -> NOR -> E -> Output
 
+- Verified using worst-case single-bit input transitions
+- The **E output** dominates overall timing
+
+### Pre-Optimization Delay
+- Worst-case propagation delay: **≈ 17.1 ns**
+
+---
+
+## 🚀 Logical Effort Optimization
+
+Applied **logical effort theory** to minimize delay:
+
+- Computed:
+  - Logical effort (G)
+  - Branching effort (B)
+  - Electrical effort (H)
+- Determined:
+  - Optimal stage effort
+  - Optimal transistor widths for each gate
+- Resized **every transistor** along the critical path
+
+All sizing respected:
+- μₙ / μₚ ≈ 1.6 (balanced inverter)
+- Maximum transistor width constraints
+
+---
+
+## 📈 Final Performance Results
+
+After transistor resizing and re-simulation:
+
+### Worst-Case Delay (E output)
+- **tPLH(max): 2.2355 ns**
+
+### Average Delay
+- **tp(avg): 1.93 ns**
+
+### Speed Improvement
+
+| Metric | Before | After |
+|-----|-------|------|
+| Worst-Case Delay | ~17.1 ns | **~2.24 ns** |
+| Improvement | — | **~7.6× faster** |
+
+### Maximum Operating Frequency
+- **Worst-case:** ~447 MHz  
+- **Average-case:** ~519 MHz  
+
+---
+
+## 🛠️ Tools & Technology
+
+- **Synopsys Custom Compiler** — schematic design
+- **HSPICE** — transient & timing simulation
+- **32 nm CMOS PDK**
+- Static CMOS (no dynamic or ratioed logic)
+
+---
+
+📄 **Full technical report:**  
+See `EE103_Final_Project.pdf` for complete derivations, schematics, and simulation results.
+
+---
+
+## 🎯 Key Takeaways
+
+- Demonstrates an end-to-end custom CMOS design flow
+- Shows practical application of logical effort
+- Highlights tradeoffs between transistor number, size, and topology
+- Emphasizes verification-driven design
+
+This project reflects real-world custom digital IC design techniques used in high-performance datapaths and control logic.
+
+---
+
+## 👤 Author
+**Cooper Bailey**  
+Computer Engineering — Tufts University
